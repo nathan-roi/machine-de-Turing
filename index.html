@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INFO602 - TP1</title>
+    <link rel="stylesheet" href="style.css"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main class="h-screen grid grid-cols-3 gap-14">
+        <div class="grid col-span-2 overflow-y-scroll">
+            <div class="flex flex-col w-full h-screen align-center justify-center">
+                <table id="dataTable"></table>
+            </div>
+        </div>
+
+
+        <div id="console" class="h-screen grid col-start-3 col-end-3 gap-4 place-items-center">
+            <div class="flex gap-4 items-center">
+                <div id="infosMachine">
+                    <p class="self-center">Input symbols : <span id="input"></span></p>
+                    <p class="self-center">Final state(s) : <span id="final"></span></p>
+                </div>
+
+                <div class="flex flex-col gap-4">
+                    <label for="fileInput" id="labelFileInput" class="custom-button">Choisir un fichier</label>
+                    <input type="file" id="fileInput" accept=".mt" >
+                    <form>
+                        <input type="text" id="wordInput" placeholder="Valeur du mot"/>
+                        <button type="submit" id="btnSubmit">Check</button>
+                        <p id="p" class="absolute mt-1.5"></p>
+                    </form>
+                </div>
+            </div>
+
+            <div id="histo">
+                <h1>HISTORIQUE</h1>
+                <div id="logTuring"></div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

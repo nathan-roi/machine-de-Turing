@@ -1,0 +1,162 @@
+:root{
+    --main-color: #ff66a3;
+    --border-main-color: #A84371FF;
+    --even-color: #ffff00;
+    --green-btn: #4ffc8d;
+    --blue-btn: #48cbfd;
+}
+
+body{
+    font-family: Montserrat, sans-serif;
+    font-weight: 750;
+}
+
+/* TABLEAU */
+
+#dataTable{
+    width: calc(100% - 24px);
+    border: solid 3px var(--border-main-color);
+    border-collapse: collapse;
+    background-color: white;
+    text-align: center;
+    box-shadow: 12px 12px 0 black;
+    margin-left: 12px;
+    margin-right: 12px;
+}
+
+tbody td{
+    border-right: solid 3px black;
+    border-bottom: solid 3px black;
+}
+
+tbody td:last-child{
+    border-right: 3px solid var(--border-main-color);
+}
+
+tbody tr:last-child td{
+    border-bottom: 3px solid var(--border-main-color);
+}
+
+thead, thead th, tbody th{
+    height: 3.5rem;
+    background: var(--main-color);
+    color: white;
+    border: 3px solid var(--border-main-color);
+}
+
+tbody tr:nth-child(even){
+    background-color: var(--even-color);
+}
+
+/* FORMULAIRE */
+
+/* Masquer le vrai input */
+input[type="file"] {
+    display: none;
+}
+
+#labelFileInput{
+    width: 60%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+#btnSubmit, #labelFileInput {
+    padding: 5px 10px;
+    border: 3px solid black;
+    box-shadow: 3px 3px 0 black;
+    font-weight: 750;
+    background: var(--green-btn);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+#btnSubmit:hover, #labelFileInput:hover {
+    translate: 1.5px 1.5px;
+    box-shadow: 1.5px 1.5px 0 black;
+    background: var(--blue-btn);
+}
+
+#btnSubmit:active, #labelFileInput:active {
+    translate: 3px 3px;
+    box-shadow: 0 0 0 black;
+}
+
+#wordInput{
+    width: 60%;
+    padding: 5px 10px;
+    border: solid 3px black;
+    box-shadow: 3px 3px 0 black;
+}
+
+#wordInput:focus-visible{
+    outline: 1px solid black;
+}
+
+/* infos machine de turing */
+#infosMachine{
+    width: 40%;
+    border: solid 3px black;
+    padding: 5px 10px;
+    box-shadow: 5px 5px 0 black;
+}
+
+#infosMachine span{
+    color: var(--main-color);
+}
+
+/* RUBAN */
+
+#histo{
+    width: 75%;
+    padding: 10px 10px 10px 10px;
+    margin-bottom: 10px;
+    border: solid 3px black;
+    box-shadow: 10px 10px 0 black;
+    text-align: left;
+    background-color: var(--main-color);
+}
+
+#histo h1{
+    position : relative;
+    top: -25px;
+    left: -60px;
+    font-size: 1.8rem;
+    width: fit-content;
+    padding: 0 8px 0 8px;
+    background-color: var(--even-color);
+    border: solid 3px black;
+    box-shadow: 5px 5px 0 black;
+}
+
+#logTuring{
+    height: 60vh;
+    text-align: center;
+    line-height: 3rem;
+    font-size: 1.2rem;
+    overflow-y: auto;
+}
+
+#logTuring p{
+    text-shadow: 1px 1px 0 var(--border-main-color);
+}
+
+.curseur{
+    color: var(--even-color);
+}
+
+#reconnu, #nonReconnu{
+    font-size: 1.4rem;
+    padding: 0 10px 0 10px;
+    border: solid 3px black;
+    box-shadow: 3px 3px 0 black;
+    text-shadow: none;
+}
+
+#reconnu{
+    background-color: var(--blue-btn);
+}
+
+#nonReconnu{
+    background-color: white;
+}
