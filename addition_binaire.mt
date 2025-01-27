@@ -22,7 +22,6 @@ x
 A
 B
 C
-#
 
 /**  Blank symbol **/
 #

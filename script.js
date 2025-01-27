@@ -167,6 +167,14 @@ document.getElementById('fileInput').addEventListener('change', function(event) 
             if (thead && tbody){thead.remove();tbody.remove();}
 
             tapeAlphabet = getSection(content, '/**  Tape alphabet **/');
+            blankSymbol = getSection(content, '/**  Blank symbol **/');
+
+            /* Si le symbole blanc n'est pas dans l'alphabet alors on le rajoute à l'alphabet avant de créer le tableau html */
+            blankSymbol = blankSymbol[0]
+            if (!tapeAlphabet.includes(blankSymbol)){
+                tapeAlphabet.push(blankSymbol)
+            }
+
             createHead(tapeAlphabet);
 
             states = getSection(content, '/**  States **/');
